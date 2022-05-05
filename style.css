@@ -161,4 +161,10 @@ body {
   font-size: 0.75rem;
 }
 
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
