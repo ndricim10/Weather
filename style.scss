@@ -18,7 +18,7 @@ body {
 }
 
 .weather-app {
-    height: 40vh;
+    // height: 40vh;
     width: 50vw;
     // background-color: white;
     display: flex;
@@ -33,7 +33,15 @@ body {
     h3{
         color: white;
     }
-   
+   span[data-span-display="false"]{
+       display: none;
+   }
+   span[data-span-display="true"]{
+       display: block;
+       color:brown;
+       font-size: .9rem;
+       font-weight: 700;
+   }
 
     .weather-form {
         display: flex;
@@ -82,11 +90,11 @@ body {
     flex-direction: column;
     gap: 10px;
     border: 1px solid #ddd;
-    max-height: 60vh;
+    // max-height: 60vh;
     height: max-content;
     padding: 1.5rem;
     border-radius: 10px;
-    max-width: 40vw;
+    // max-width: 40vw;
     width: max-content;
     transform: scale(1.1);
     // cursor: pointer;
@@ -142,4 +150,41 @@ body {
 .weather-fixed[data-weather-display="false"]{
     display: none;
     transition: 800ms ease-in-out;
+}
+
+.conditions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    // padding: 1rem;
+    margin-top: 20px;
+
+    div{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+
+        i{
+            // color: chocolate;
+            // font-weight: 700;
+            font-size: 1.7rem;
+            color: white;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            color: white;
+
+            .numbers{
+                font-size: 1.5rem;
+            }
+            .description{
+                font-size: .75rem;
+            }
+        }
+    }
 }

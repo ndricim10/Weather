@@ -18,7 +18,6 @@ body {
 }
 
 .weather-app {
-  height: 40vh;
   width: 50vw;
   display: flex;
   justify-content: center;
@@ -31,6 +30,15 @@ body {
 }
 .weather-app h3 {
   color: white;
+}
+.weather-app span[data-span-display=false] {
+  display: none;
+}
+.weather-app span[data-span-display=true] {
+  display: block;
+  color: brown;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 .weather-app .weather-form {
   display: flex;
@@ -72,11 +80,9 @@ body {
   flex-direction: column;
   gap: 10px;
   border: 1px solid #ddd;
-  max-height: 60vh;
   height: max-content;
   padding: 1.5rem;
   border-radius: 10px;
-  max-width: 40vw;
   width: max-content;
   transform: scale(1.1);
 }
@@ -123,6 +129,36 @@ body {
 .weather-fixed[data-weather-display=false] {
   display: none;
   transition: 800ms ease-in-out;
+}
+
+.conditions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+.conditions div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.conditions div i {
+  font-size: 1.7rem;
+  color: white;
+}
+.conditions div div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  color: white;
+}
+.conditions div div .numbers {
+  font-size: 1.5rem;
+}
+.conditions div div .description {
+  font-size: 0.75rem;
 }
 
 /*# sourceMappingURL=style.css.map */

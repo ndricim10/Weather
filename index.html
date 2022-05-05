@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div class="weather-app">
         <h3>Weather APP</h3>
         <div class="weather-form">
-            <input type="text" 
-            placeholder="Enter a city name" data-city>
+            <input type="text" placeholder="Enter a city name" data-city>
+            <span class="error" data-span-display="false">This field is required</span>
             <button data-location>Submit</button>
         </div>
     </div>
@@ -26,18 +28,52 @@
             <span>Weather App</span>
         </div>
         <hr>
-        <div  class="weather-display" >
-            <img src="./images/partly_cloudy.png" data-image>
+        <div class="weather-display">
+            <img src="./images/sunny.png" data-image>
             <span class="temp">15°C</span>
             <span class="clouds">Partly clouded</span>
             <span><i class="fal fa-map-marker-alt"></i>
                 <span class="location">Tirana, Albania</span>
             </span>
         </div>
-    </div>
+
+        <div class="conditions">
+            <div class="feels-like">
+                <i class="far fa-thermometer-full"></i>
+                <div class="feels-flex">
+                    <span class="feels numbers">17</span>
+                    <span class="feels-span description">Feels like</span>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="far fa-wind"></i>
+                <div>
+
+                    <span class="speed-wind numbers">3.5</span>
+                    <span class="description">m/s</span>
+                </div>
+            </div>
+            <div>
+                <i class="fal fa-temperature-low"></i>
+                <div>
+                    <span class="span-min numbers">10</span>
+                    <span class="description">Minimum</span>
+                </div>
+
+            </div>
+            <div>
+                <i class="fal fa-temperature-high"></i>
+                <div>
+                    <span class="span-max numbers">10</span>
+                    <span class="description">Maximum</span>
+                </div>
+
+            </div>
+        </div>
 
 
 
-    <script src="./app.js"></script>
+        <script src="./app.js"></script>
 </body>
+
 </html>
